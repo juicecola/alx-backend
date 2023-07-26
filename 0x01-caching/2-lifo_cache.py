@@ -16,7 +16,7 @@ class LIFOCache(BaseCaching):
         if key is not None and item is not None:
             if len(self.cache_data) >= self.MAX_ITEMS:
                 """remove last item from queue and cache"""
-                last_item = self.queue.pop(3)
+                last_item = self.queue.pop()
                 self.cache_data.pop(last_item)
                 print("DISCARD:", last_item)
 
